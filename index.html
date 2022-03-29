@@ -10,6 +10,9 @@
     crossorigin="anonymous"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -18,6 +21,42 @@
   <header>
   </header>
   <main>
+    <div class="nav-bar">
+      <div class="row container align-center ">
+        <h2 class="column-full">Code Journal</h2>
+      </div>
+    </div>
+    <div class="container" data-view="entry-form">
+      <div class="column-full">
+        <h1>New Entry</h1>
+      </div>
+      <div class="row">
+        <div class="column-half">
+          <img src="images/placeholder-image-square.jpg" alt="placeholder-img">
+        </div>
+        <div class="column-half pt-20">
+          <div class="row">
+            <label for="Title">Title
+              <input type="text">
+            </label>
+          </div>
+          <div class="row">
+            <label for="Photo URL">Photo URL
+              <input type="text"></label>
+          </div>
+        </div>
+      </div>
+      <div class="column-full pb-20">
+        <div class="row">
+          <label for="Notes">Notes</label>
+          <textarea rows="10" cols="33"></textarea>
+          <button class="button-container">SAVE</button>
+
+
+        </div>
+      </div>
+
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
