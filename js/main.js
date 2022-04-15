@@ -2,11 +2,16 @@
 /* exported data */
 
 var theForm = document.querySelector('#form');
-// var src = thePhotoUrl.getAttribute('src');
-var setPhotoUrl = document.querySelector('#photo');
-theForm.addEventListener('paste', function (event) {
-  var thePhotoValue = theForm.elements.photoUrl.value;
-  setPhotoUrl.setAttribute('src', thePhotoValue);
+var photo = document.querySelector('#photo');
+var photoUrl = document.querySelector('#photoUrlId');
+
+// var thePhotoValue = theForm.elements.photoUrl.value;
+photoUrl.addEventListener('input', function (event) {
+  if (/\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(photoUrl.value) === true) {
+    photo.src = photoUrl.value;
+  } else {
+    photo.src = 'images/placeholder-image-square.jpg';
+  }
 });
 
 theForm.addEventListener('submit', function (event) {
@@ -23,6 +28,7 @@ theForm.addEventListener('submit', function (event) {
   var array = data.entries;
   array.push(newEntry);
   theForm.reset();
+  photo.src = 'images/placeholder-image-square.jpg';
 });
 
 // test image https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png
