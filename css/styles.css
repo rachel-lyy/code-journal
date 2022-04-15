@@ -63,6 +63,7 @@ textarea {
   margin-bottom: 30px;
   margin-top: 10px;
   margin-right: 0;
+  padding-left: 13px;
 }
 
 input,
@@ -88,21 +89,14 @@ label {
 }
 
 /* spacing */
-.pt-20 {
-  padding-top: 20px;
-}
-
-.pb-20 {
-  padding-bottom: 20px;
-}
-
-.px-20 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .pt-20 {
-    padding-top: 0;
+  .py-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }

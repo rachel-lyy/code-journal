@@ -30,32 +30,42 @@
       <div class="column-full">
         <h1>New Entry</h1>
       </div>
-      <div class="row">
-        <div class="column-half">
-          <img src="images/placeholder-image-square.jpg" alt="placeholder-img">
-        </div>
-        <div class="column-half pt-20">
-          <div class="row">
+      <form id="form">
+        <div class="row">
+          <div class="column-half py-10">
+            <img src="images/placeholder-image-square.jpg" alt="placeholder-img" id="photo">
+          </div>
+          <div class="column-half py-10">
             <label for="Title">Title
-              <input type="text">
+              <input
+                required
+                name="title"
+                type="text"
+                id="title">
+            </label>
+            <label for="Photo URL">Photo URL
+              <input
+                required
+                name="photoUrl"
+                type="text"
+                id="photoUrlId">
             </label>
           </div>
-          <div class="row">
-            <label for="Photo URL">Photo URL
-              <input type="text"></label>
+          <div class="column-full">
+            <label for="Notes">Notes</label>
+            <textarea
+              required
+              name="notes"
+              id="notes"
+              rows="5"
+              cols="5" >
+            </textarea>
+            <div class="button-container">
+              <button>SAVE</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="column-full pb-20">
-        <div class="row">
-          <label for="Notes">Notes</label>
-          <textarea rows="10" cols="33"></textarea>
-          <button class="button-container">SAVE</button>
-
-
-        </div>
-      </div>
-
+      </form>
     </div>
   </main>
   <script src="js/data.js"></script>
