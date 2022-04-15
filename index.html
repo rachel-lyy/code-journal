@@ -10,6 +10,9 @@
     crossorigin="anonymous"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -18,6 +21,52 @@
   <header>
   </header>
   <main>
+    <div class="nav-bar">
+      <div class="row container align-center ">
+        <h2 class="column-full">Code Journal</h2>
+      </div>
+    </div>
+    <div class="container" data-view="entry-form">
+      <div class="column-full">
+        <h1>New Entry</h1>
+      </div>
+      <form id="form">
+        <div class="row">
+          <div class="column-half py-10" id="photoContainer">
+            <img src="images/placeholder-image-square.jpg" alt="placeholder-img" id="photo">
+          </div>
+          <div class="column-half py-10">
+            <label for="Title">Title
+              <input
+                required
+                name="title"
+                type="text"
+                id="title">
+            </label>
+            <label for="Photo URL">Photo URL
+              <input
+                required
+                name="photoUrl"
+                type="text"
+                id="photoUrlId">
+            </label>
+          </div>
+          <div class="column-full">
+            <label for="Notes">Notes</label>
+            <textarea
+              required
+              name="notes"
+              id="notes"
+              rows="5"
+              cols="5" >
+            </textarea>
+            <div class="button-container">
+              <button>SAVE</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
